@@ -1,6 +1,6 @@
 {
-  "name": "@lerna-monorepo/blog",
-  "description": "Lerna monorepo starter",
+  "name": "@lerna-monorepo/shop",
+  "description": "Lerna monorepo finisher",
   "version": "1.0.2",
   "dependencies": {
     "@lerna-monorepo/shared-ui": "^1.0.1",
@@ -21,8 +21,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "serve public/",
+    "start": "serve public",
     "build": "gatsby build",
-    "develop": "gatsby develop"
+    "develop": "gatsby develop -p 8001"
   }
 }

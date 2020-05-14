@@ -2,28 +2,28 @@ import React from "react";
 import Link from "gatsby-link";
 import { ItemCard, ItemCardWrapper } from "@lerna-monorepo/shared-ui";
 
-const BlogPage = ({ data }) => {
-  const edges = data.allBlogJson.edges;
+const IndexPage = ({ data }) => {
+  const edges = data.allShoppingJson.edges;
 
   return (
     <div>
-      <h1>Blog Page</h1>
+      <h1>Hi people</h1>
       <ItemCardWrapper>
         {edges &&
           edges.map((edge) => (
-            <ItemCard key={edge.node.id} data={edge.node} slug="post" />
+            <ItemCard key={edge.node.id} data={edge.node} slug="item" />
           ))}
       </ItemCardWrapper>
-      <a href={process.env.SHOP_URL}>Go back to the shop</a>
+      <a href={process.env.BLOG_URL}>Go to Blog</a>
     </div>
   );
 };
 
-export default BlogPage;
+export default IndexPage;
 
 export const query = graphql`
-  query BlogPostsQuery {
-    allBlogJson {
+  query ShoppingPageQuery {
+    allShoppingJson {
       edges {
         node {
           id
