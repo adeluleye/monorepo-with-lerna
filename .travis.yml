@@ -1,11 +1,11 @@
 language: node_js
 node_js:
-  - "10.9.0"
+  - "12.16.3"
 
 cache: yarn
 
 install:
-  - yarn global add lerna jest
+  - yarn add lerna jest
   - lerna bootstrap
 
 script:
